@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Simple FAQ | devChallenges.io</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8fafc;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 0;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 16px;
+        letter-spacing: -0.025em;
+      }
+
+      .subtitle {
+        font-size: 1.125rem;
+        color: #64748b;
+        font-weight: 400;
+      }
+
+      .faq-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .faq-item {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all 0.2s ease;
+      }
+
+      .faq-item:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .faq-question {
+        width: 100%;
+        padding: 24px;
+        background: none;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #1a202c;
+        transition: all 0.2s ease;
+      }
+
+      .faq-question:hover {
+        background-color: #f8fafc;
+      }
+
+      .faq-question:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: -2px;
+      }
+
+      .faq-icon {
+        flex-shrink: 0;
+        transition: transform 0.2s ease;
+        color: #64748b;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+        color: #3b82f6;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 500px;
+      }
+
+      .faq-content {
+        padding: 0 24px 24px 24px;
+        color: #4a5568;
+        line-height: 1.7;
+      }
+
+      .faq-content p {
+        margin-bottom: 16px;
+      }
+
+      .faq-content p:last-child {
+        margin-bottom: 0;
+      }
+
+      .faq-content ol,
+      .faq-content ul {
+        margin: 16px 0;
+        padding-left: 20px;
+      }
+
+      .faq-content li {
+        margin-bottom: 8px;
+      }
+
+      .faq-content strong {
+        color: #1a202c;
+        font-weight: 600;
+      }
+
+      .author-info {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 48px;
+        color: #64748b;
+        padding: 20px;
+      }
+
+      .author-info a {
+        text-decoration: none;
+        color: #3b82f6;
+        font-weight: 500;
+      }
+
+      .author-info a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        body {
+          padding: 16px;
+        }
+
+        .container {
+          padding: 20px 0;
+        }
+
+        .title {
+          font-size: 2rem;
+        }
+
+        .subtitle {
+          font-size: 1rem;
+        }
+
+        .faq-question {
+          padding: 20px;
+          font-size: 1rem;
+        }
+
+        .faq-content {
+          padding: 0 20px 20px 20px;
+        }
+
+        .header {
+          margin-bottom: 32px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .title {
+          font-size: 1.75rem;
+        }
+
+        .faq-question {
+          padding: 16px;
+        }
+
+        .faq-content {
+          padding: 0 16px 16px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1 class="title">Frequently Asked Questions</h1>
+        <p class="subtitle">Browse through the most frequently asked questions</p>
+      </header>
+
+      <section class="faq-section">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How can I track my order?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-content">
+              <p>You can track your order using the following steps:</p>
+              <ol>
+                <li>Go to the Order Tracking page.</li>
+                <li>Enter your order number and email address.</li>
+                <li>Click on the Track Order button to view the current status of your shipment.</li>
+              </ol>
+              <p>If you encounter any issues, please visit our Help Center.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is your return policy?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-content">
+              <p>We offer a 30-day return policy on most items. Here are some key points:</p>
+              <ul>
+                <li><strong>Items must be in original condition</strong><br>
+                    Unworn, unused, and unwashed.</li>
+                <li><strong>Include original packaging and tags</strong><br>
+                    All items should be returned with their original packaging and tags.</li>
+                <li><strong>Proof of purchase</strong><br>
+                    A receipt or proof of purchase is required.</li>
+              </ul>
+              <p>For more detailed information, read our full Return Policy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="author-info">
+      Coded by <a href="#">Ayokanmi Adejola</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </div>
+
+    <script>
+      // FAQ Accordion functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+          question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const faqAnswer = faqItem.querySelector('.faq-answer');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+            // Close all other FAQ items
+            faqQuestions.forEach(otherQuestion => {
+              if (otherQuestion !== this) {
+                otherQuestion.setAttribute('aria-expanded', 'false');
+                otherQuestion.parentElement.classList.remove('active');
+              }
+            });
+
+            // Toggle current FAQ item
+            this.setAttribute('aria-expanded', !isExpanded);
+            faqItem.classList.toggle('active');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
