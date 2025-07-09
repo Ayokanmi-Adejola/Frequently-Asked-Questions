@@ -5,16 +5,6 @@
 </div>
 
 
-## Table of Contents
-
-- [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
-- [Built with](#built-with)
-- [Features](#features)
-- [Author](#author)
-- [Acknowledgements](#acknowledgements)
 
 ## Overview
 
