@@ -80,10 +80,6 @@ This FAQ page includes:
 
 This application was created as a submission to a [DevChallenges](https://devchallenges.io/challenges-dashboard) challenge.
 
-## Author
-
-- Coded by [Ayokanmi Adejola](https://github.com/adejolaayokanmi)
-- Challenge by [devChallenges.io](https://devchallenges.io?ref=challenge)
 
 ## Acknowledgements
 
