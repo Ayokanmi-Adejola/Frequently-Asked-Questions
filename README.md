@@ -1,18 +1,15 @@
 <h1 align="center">Simple FAQ Page | devChallenges</h1>
 
-<div align="center">
-   Solution for a challenge <a href="https://devchallenges.io/challenge/simple-faq-challenge" target="_blank">Simple FAQ</a> from <a href="http://devchallenges.io" target="_blank">devChallenges.io</a>.
-</div>
-
-
+![Simple FAQ Page](./thumbnail.jpg)
 
 ## Overview
 
 This project is a responsive FAQ (Frequently Asked Questions) page built as part of the devChallenges.io Simple FAQ challenge. The page features an interactive accordion-style interface where users can click on questions to reveal detailed answers.
 
-### Screenshot
+| Desktop | Tablet | Mobile |
+| ------- | ------ | ------ |
+| ![Desktop](./design/Desktop_1350px.jpg) | ![Tablet](./design/Tablet_1024px.jpg) | <img width="412" height="1264" alt="image" src="https://github.com/user-attachments/assets/d47b9cdb-7822-4bed-8bb9-75a213569f31" /> |
 
-![Simple FAQ Page](./thumbnail.jpg)
 
 The page includes two main FAQ items:
 1. **How can I track my order?** - Provides step-by-step instructions for order tracking
